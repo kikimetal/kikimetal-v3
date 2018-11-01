@@ -3,13 +3,14 @@
     <Logotype />
     <router-link
       exact
-      to="/">Kikimetal Home</router-link>
-
-
-
+      to="/">
+      Kikimetal Home
+    </router-link>
     <router-link
       exact
-      to="/drawing">My drawing</router-link>
+      to="/drawing">
+      My drawing
+    </router-link>
     <Logotype fill="thistle" />
     <Logotype />
     <Logotype fill="thistle" />
