@@ -8,7 +8,7 @@ module.exports = {
   */
   head: {
     // title: pkg.name,
-    title: 'kikimetal | ききめたる',
+    title: 'KIKIMETAL | ききめたる',
     meta: [
       { charset: 'utf-8' },
       {
@@ -20,22 +20,20 @@ module.exports = {
       {
         hid: 'description',
         name: 'description',
-        content:
-          '株式会社CARVANCL（カーバンクル）は、若手デザイナーを起用したチームで新しい答えを生み出していくデザインプロジェクト推進企業です。上流工程からブランドづくりに関わり、ブランド戦略策定、UX設計、UIデザイン、デザインシステム設計を経てWebアプリケーション・サービスの制作を行います。',
+        content: 'ききめたるの巣v3です...',
       },
+      // OGP
       {
         property: 'og:title',
-        content:
-          'CARVANCL カーバンクル - 経営に伴走するデザインプロジェクト企業',
+        content: 'KIKIMETAL | ききめたる',
       },
       {
         property: 'og:description',
-        content:
-          '株式会社CARVANCL（カーバンクル）は若手デザイナーを中心に起用したチームで新しい答えを生み出していくデザインプロジェクト推進企業です。上流工程からブランドづくりに関わり、ブランド戦略策定、UX設計、UIデザイン、デザインシステム設計を経てWebアプリケーション・サービスの制作を行います。',
+        content: 'ききめたるの巣v3です...',
       },
-      { property: 'og:url', content: 'https://carvancl.co.jp' },
+      { property: 'og:url', content: 'https://kikimetal.com' },
       { property: 'og:type', content: 'website' },
-      { property: 'og:image', content: 'https://carvancl.co.jp/og-card.png' },
+      { property: 'og:image', content: 'https://kikimetal.com/og-image.jpg' },
       { name: 'twitter:card', content: 'summary_large_image' },
     ],
     link: [
@@ -62,7 +60,7 @@ module.exports = {
   /*
   ** Global CSS
   */
-  css: [],
+  css: ['assets/css/common.scss'],
 
   /*
   ** Plugins to load before mounting the App
