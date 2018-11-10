@@ -23,15 +23,15 @@
 <script>
 export default {
   props: {
-    fill: { type: String, default: 'pink' }
+    fill: { type: String, default: 'pink' },
   },
   data() {
     return {
       style: {
-        fill: this.fill || '#333'
-      }
+        fill: this.fill || '#333',
+      },
     }
-  }
+  },
 }
 </script>
 

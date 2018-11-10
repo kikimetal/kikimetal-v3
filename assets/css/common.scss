@@ -1,8 +1,43 @@
+@import '~/assets/css/myreset.scss';
+@import '~/assets/css/animate.css';
+@import '~/assets/css/myset.scss';
+
 :root {
   --ease-out: cubic-bezier(0.165, 0.84, 0.44, 1);
   --scrollY: 0px;
+  @include font-base;
 }
-/* nuxt page transition */
+
+br {
+  &.sm {
+    @include md {
+      display: none;
+    }
+  }
+  &.md {
+    @include sm {
+      display: none;
+    }
+  }
+}
+
+/* scroll out js */
+[data-scroll] {
+}
+[data-scroll='in'] {
+  transition: 2s transform $ease-out, 2s opacity ease;
+  opacity: 1;
+  transform: translateX(0);
+}
+[data-scroll='out'] {
+  opacity: 0;
+  transform: translateX(100px);
+  @include md {
+    transform: translateX(160px);
+  }
+}
+
+/* nuxt transition */
 .page-enter-active {
   transition: opacity ease-out 0.5s, transform var(--ease-out) 0.6s;
 }
@@ -11,9 +46,15 @@
 }
 .page-leave-to {
   opacity: 0;
-  transform: scale(0.98);
+  transform: scale(0.92);
+  @include md {
+    transform: scale(0.96);
+  }
 }
 .page-enter {
   opacity: 0;
-  transform: scale(1.04);
+  transform: scale(1.09);
+  @include md {
+    transform: scale(1.06);
+  }
 }

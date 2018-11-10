@@ -1,7 +1,17 @@
 <template>
   <div class="page">
-    <h1 id="doeSupported">No</h1>
-    <h1 id="coordinate">coordinate</h1>
+    <div class="">
+      <h1>ジャイロのテストだよ</h1>
+      <h1>曲線美の誘惑</h1>
+      <h1 id="doeSupported">No</h1>
+      <h1 id="coordinate">coordinate</h1>
+      <h1>KIKIMETAL</h1>
+    </div>
+    <br><br><br>
+    <div class="f2">
+      <h1>ジャイロのテストだよ</h1>
+      <h1>誘惑するKIKIMETAL</h1>
+    </div>
   </div>
 </template>
 
@@ -49,5 +59,19 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
+@import '~/assets/css/myset.scss';
+.page {
+  @include flex-center;
+}
+h1 {
+  font-size: 14px;
+  color: rgb(241, 225, 227);
+  @include font-base(300);
+  line-height: 1.3;
+}
+.f2 h1 {
+  font-size: 40px;
+  @include font-accent(bold);
+}
 </style>
