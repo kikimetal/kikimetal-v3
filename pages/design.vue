@@ -6,7 +6,14 @@
 </template>
 
 <script>
-export default {}
+export default {
+  mounted() {
+    this.$store.state.so()
+  },
+  head() {
+    return this.$store.state.getHead()
+  },
+}
 </script>
 
 <style lang="scss" scoped>

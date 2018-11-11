@@ -22,19 +22,36 @@ br {
 }
 
 /* scroll out js */
-[data-scroll] {
-}
-[data-scroll='in'] {
+// type slide
+[data-scroll][data-scroll-type='slide'] {
   transition: 2s transform $ease-out, 2s opacity ease;
+}
+[data-scroll='in'][data-scroll-type='slide'] {
   opacity: 1;
   transform: translateX(0);
 }
-[data-scroll='out'] {
+[data-scroll='out'][data-scroll-type='slide'] {
   opacity: 0;
   transform: translateX(100px);
   @include md {
     transform: translateX(160px);
   }
+  &[data-scroll-direction='reverse'] {
+    transform: translateX(-100px);
+    @include md {
+      transform: translateX(-160px);
+    }
+  }
+}
+// type visibleY
+[data-scroll][data-scroll-type='visible-y'] {
+  transition: none;
+}
+[data-scroll='in'][data-scroll-type='visible-y'] {
+  opacity: var(--visible-y);
+}
+[data-scroll='out'][data-scroll-type='visible-y'] {
+  opacity: 0;
 }
 
 /* nuxt transition */

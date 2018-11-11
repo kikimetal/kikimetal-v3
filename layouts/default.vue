@@ -20,7 +20,12 @@
 </template>
 
 <script>
+import Vue from 'vue'
+import VueParallaxJs from 'vue-parallax-js'
+Vue.use(VueParallaxJs, { className: 'v-parallax' })
+
 import Nav from '~/components/Nav.vue'
+
 export default {
   components: {
     Nav,
@@ -40,6 +45,8 @@ export default {
     if (process.browser) {
       this.setPropertyScrollY()
       window.addEventListener('scroll', this.handleScroll)
+      // get art items
+      this.$store.commit('setArtItems')
     }
   },
   destroyed() {

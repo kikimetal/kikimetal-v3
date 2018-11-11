@@ -16,9 +16,12 @@ const store = () =>
         ScrollOut({
           cssProps: {
             // viewportY: true,
-            // visibleY: true,
+            visibleY: true,
           },
         }),
+
+      artItemsStatus: false,
+      artItems: Array(5).fill({}),
     },
 
     mutations: {
@@ -45,6 +48,29 @@ const store = () =>
         } else {
           state.isShowNav = isShow
         }
+      },
+
+      setArtItems(state, items) {
+        if (state.artItemsStatus) return
+
+        const api =
+          'https://maylily.co.jp/api/getSheet.php' +
+          '?GSSID=' +
+          '1_CzKIJarThdNjjobQNLJRWmYD9edVEvuYrBrilPlV_s' +
+          '&sheetName=art' +
+          '&imgsrc' +
+          '&message'
+        this.$axios(api)
+          .then(res =>
+            res.data.map(row => ({
+              ...row,
+              load: false,
+            }))
+          )
+          .then(data => {
+            state.artItems = data
+            state.artItemsStatus = true
+          })
       },
     },
   })
