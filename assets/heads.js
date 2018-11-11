@@ -1,5 +1,4 @@
-const base =
-  ' | 株式会社Autumn オータム 若手に響く驚きと新鮮さを作る映像製作会社'
+const base = ' | KIKIMETAL ききめたる'
 const common = {
   meta: [
     // { name: 'fb:admins', content: 'admin id' },

@@ -64,7 +64,7 @@ export default {
   transform-origin: 50% calc(50vh + var(--scrollY));
 }
 :root {
-  background: $pink-pastel;
+  // background: $pink-pastel;
 }
 #bg {
   position: fixed;
@@ -73,7 +73,7 @@ export default {
   right: 0;
   bottom: 0;
   // background: linear-gradient(35deg, hotpink, rgb(139, 102, 215));
-  background: $pink-pastel;
+  // background: $pink-pastel;
   z-index: -999;
 }
 </style>
