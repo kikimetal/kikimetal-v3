@@ -72,18 +72,6 @@ export default {
   box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.1);
   z-index: 9999;
 
-  // &::before {
-  //   content: '';
-  //   position: absolute;
-  //   top: 6px;
-  //   left: 6px;
-  //   right: 6px;
-  //   bottom: 6px;
-  //   display: block;
-  //   border: 1px solid rgba($white, 0.3);
-  //   pointer-events: none;
-  // }
-
   .link {
     flex: 1 1 calc(100% / 3);
     padding: 1em;
