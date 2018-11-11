@@ -73,7 +73,8 @@ export default {
   right: 0;
   bottom: 0;
   // background: linear-gradient(35deg, hotpink, rgb(139, 102, 215));
-  // background: $pink-pastel;
+  // background: linear-gradient(135deg, rgb(255, 241, 249), rgb(244, 237, 255));
+  background: $bg-color;
   z-index: -999;
 }
 </style>

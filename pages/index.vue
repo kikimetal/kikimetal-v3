@@ -1,45 +1,6 @@
 <template>
   <div class="page">
-    <Logotype />
-    <Logotype fill="thistle" />
-    <Logotype />
-    <Logotype fill="thistle" />
-    <Logotype />
-    <Logotype fill="thistle" />
-    <Logotype />
-    <Logotype fill="thistle" />
-    <Logotype />
-    <div data-scroll data-so-scale>
-      <Logotype fill="thistle" />
-    </div>
-    <Logotype />
-    <div data-scroll data-so-scale>
-      <Logotype fill="thistle" />
-    </div>
-    <Logotype />
-    <div data-scroll data-so-scale>
-      <Logotype fill="thistle" />
-    </div>
-    <Logotype />
-    <div data-scroll data-so-scale>
-      <Logotype fill="thistle" />
-    </div>
-    <Logotype />
-    <Logotype fill="thistle" />
-    <Logotype />
-    <Logotype fill="thistle" />
-    <Logotype />
-    <Logotype fill="thistle" />
-    <Logotype />
-    <Logotype fill="thistle" />
-    <Logotype />
-    <Logotype fill="thistle" />
-    <Logotype />
-    <Logotype fill="thistle" />
-    <Logotype />
-    <Logotype fill="thistle" />
-    <Logotype />
-    <Logotype fill="thistle" />
+    <div data-scroll data-so-scale><Logotype fill="thistle" /></div>
   </div>
 </template>
 

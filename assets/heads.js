@@ -24,7 +24,7 @@ const generate = data => ({
 
 export default {
   '/': generate({
-    title: 'Home',
+    title: 'About',
   }),
   '/design': generate({
     title: 'Design',
