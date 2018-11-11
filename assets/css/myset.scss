@@ -34,7 +34,12 @@ $grey-5: #9e9fa5;
 $grey-7: #6b6d77;
 $grey-8: #585a63;
 $black: #333b40;
-$pink-pastel: rgb(255, 232, 253);
+$pink-pastel: rgb(255, 245, 254);
+
+$primary: rgb(198, 159, 180);
+$secondary: rgb(108, 97, 131);
+$bg-color: rgb(244, 236, 241);
+$shadow-color: rgba(69, 28, 66, 0.13);
 
 @function pale($color) {
   @return lighten(desaturate($color, 9%), 6%);
@@ -54,6 +59,10 @@ $ease-out-back-fast: cubic-bezier(0.08, 1, 0.91, 1.15);
   flex-flow: $axis wrap;
   justify-content: center;
   align-items: center;
+}
+
+@mixin box-shadow {
+  box-shadow: 0 4px 16px 0 $shadow-color;
 }
 
 // とりあえずいい感じにイメージを挿入するとき。

@@ -6,6 +6,7 @@
       id="global-nav-sm">
         <router-link
         v-for="(route, i) in routes"
+        :key="i"
         class="link"
         exact
         :to="route.to">
@@ -18,6 +19,7 @@
     id="global-nav-md">
       <router-link
       v-for="(route, i) in routes"
+      :key="i"
       class="link"
       exact
       :to="route.to">
@@ -32,7 +34,7 @@ export default {
   data() {
     return {
       routes: [
-        { to: '/', title: 'Home' },
+        { to: '/', title: 'About' },
         { to: '/art', title: 'Art' },
         { to: '/design', title: 'Design' },
       ],
@@ -60,21 +62,23 @@ export default {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
-  padding-bottom: 2vw;
   width: 100%;
   height: 30vw;
-  font-size: 14px;
-  font-weight: 600;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
   line-height: 1;
   text-transform: uppercase;
-  color: rgba($white, 0.8);
-  background: linear-gradient(135deg, rgb(236, 145, 194), rgb(163, 132, 227));
-  box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.1);
+  color: $secondary;
+  background: $bg-color;
+  @include box-shadow;
+  cursor: pointer;
   z-index: 9999;
 
   .link {
     flex: 1 1 calc(100% / 3);
     padding: 1em;
+    padding-bottom: 16vw;
     @include flex-center(row);
     transition: all 0.2s ease;
 
@@ -88,37 +92,65 @@ export default {
       justify-content: flex-start;
     }
 
+    span {
+      padding-left: 0.1em;
+    }
+
     &.nuxt-link-exact-active {
-      $active-color: rgba($white, 0.5);
+      $active-color: $primary;
       color: $active-color;
       span {
         position: relative;
-      }
-      span::after {
-        content: '';
-        position: absolute;
-        left: 0;
-        right: 0;
-        bottom: -1em;
-        margin: auto;
-        display: block;
-        width: 0.56em;
-        height: 0.56em;
-        background: $active-color;
-        border-radius: 50%;
-        animation: popin 0.6s $ease-out;
-        @keyframes popin {
-          0% {
-            transform: scale(5);
-            opacity: 0;
+        &::after {
+          content: '';
+          position: absolute;
+          left: 0;
+          right: 0;
+          bottom: -1em;
+          margin: auto;
+          display: block;
+          width: 7px;
+          height: 7px;
+          border-radius: 50%;
+          background: rgba($active-color, 0.6);
+          animation: circle-in 0.6s $ease-out both;
+          @keyframes circle-in {
+            0% {
+              transform: scale(5);
+              opacity: 0;
+            }
+            80% {
+              transform: scale(0.9);
+              opacity: 1;
+            }
+            100% {
+              transform: scale(1);
+              opacity: 1;
+            }
           }
-          80% {
-            transform: scale(0.9);
-            opacity: 1;
-          }
-          100% {
-            transform: scale(1);
-            opacity: 1;
+        }
+        &::before {
+          content: '';
+          position: absolute;
+          left: 0;
+          right: 0;
+          bottom: calc(-9vw - 1em);
+          margin: auto;
+          display: block;
+          width: 1px;
+          height: 9vw;
+          background: rgba($active-color, 0.6);
+          transform-origin: top;
+          animation: line-in 2s $ease-out 0.4s both;
+          @keyframes line-in {
+            0% {
+              transform: scaleY(0);
+              opacity: 0;
+            }
+            100% {
+              transform: scaleY(1);
+              opacity: 1;
+            }
           }
         }
       }
