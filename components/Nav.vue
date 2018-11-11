@@ -146,12 +146,11 @@ export default {
   }
   &-leave-to {
     opacity: 0;
-    // transform: scale(0.9);
-    transform: translateY(10vw);
+    transform: translateY(7vw);
   }
   &-enter {
     opacity: 0;
-    transform: translateY(10vw);
+    transform: translateY(7vw);
   }
 }
 </style>
