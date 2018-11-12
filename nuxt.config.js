@@ -20,7 +20,8 @@ module.exports = {
       {
         hid: 'description',
         name: 'description',
-        content: 'ききめたるの巣v3です...',
+        content:
+          'イラストレーター KIKIMETAL ききめたる のポートフォリオサイトです。もちもち。',
       },
       // OGP
       {
@@ -29,7 +30,8 @@ module.exports = {
       },
       {
         property: 'og:description',
-        content: 'ききめたるの巣v3です...',
+        content:
+          'イラストレーター KIKIMETAL ききめたる のポートフォリオサイトです。もちもち。',
       },
       { property: 'og:url', content: 'https://kikimetal.com' },
       { property: 'og:type', content: 'website' },

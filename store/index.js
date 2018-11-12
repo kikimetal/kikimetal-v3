@@ -33,7 +33,7 @@ const store = () =>
 
       setScrollUpDown(state) {
         const isUp = state.isScrollUp
-          ? state.scrollY > window.scrollY - 10 // scrollUp中の場合、タップで画面止めた場合の誤差を吸収する必要がある
+          ? state.scrollY > window.scrollY - 9 // scrollUp中の場合、タップで画面止めた場合の誤差を吸収する必要がある
           : state.scrollY > window.scrollY
 
         if (state.isScrollUp !== isUp) {
