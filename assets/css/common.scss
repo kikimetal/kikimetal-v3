@@ -65,13 +65,13 @@ br {
   opacity: 0;
   transform: scale(0.94);
   @include md {
-    transform: scale(0.96);
+    transform: scale(0.97);
   }
 }
 .page-enter {
   opacity: 0;
   transform: scale(1.06);
   @include md {
-    transform: scale(1.04);
+    transform: scale(1.03);
   }
 }

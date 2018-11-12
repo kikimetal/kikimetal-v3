@@ -34,12 +34,16 @@ $grey-5: #9e9fa5;
 $grey-7: #6b6d77;
 $grey-8: #585a63;
 $black: #333b40;
-$pink-pastel: rgb(255, 245, 254);
+$pink-pastel: rgb(250, 243, 251);
 
 $primary: rgb(198, 159, 180);
 $secondary: rgb(108, 97, 131);
 $bg-color: rgb(244, 236, 241);
 $shadow-color: rgba(69, 28, 66, 0.13);
+
+// $md-header-color: $bg-color;
+$md-header-color: rgb(249, 241, 245);
+$md-header-height: 68px;
 
 @function pale($color) {
   @return lighten(desaturate($color, 9%), 6%);
@@ -61,8 +65,8 @@ $ease-out-back-fast: cubic-bezier(0.08, 1, 0.91, 1.15);
   align-items: center;
 }
 
-@mixin box-shadow {
-  box-shadow: 0 4px 16px 0 $shadow-color;
+@mixin box-shadow($s: $shadow-color) {
+  box-shadow: 0 4px 16px 0 $s;
 }
 
 // とりあえずいい感じにイメージを挿入するとき。

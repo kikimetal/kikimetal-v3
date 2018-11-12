@@ -9,7 +9,7 @@
 
     <div class="top">
       <Logotype class="logotype" fill="rgb(198, 159, 180)" />
-      <!-- <h2 class="sub">ききめたるのポートフォリオサイトへようこそ</h2> -->
+      <h2 class="sub">好きなものを好きと言えるチカラが欲しい</h2>
     </div>
 
     <router-link exact to="/art" class="link-card to-art">
@@ -26,11 +26,14 @@
       <h1>About me</h1>
       <p>好きなものを好きというためのチカラが欲しい！</p>
       <p>少しでも多くの想いを形にしていくために、日々修行中のデザインラーナーです。</p>
+      <p>東京でフリーランスのWEB/アプリ制作をしています。</p>
       <div class="sns">
         <a class="link-btn" href="https://twitter.com/qiqimetal">Twitter</a>
         <a class="link-btn" href="https://sketch.pixiv.net/@kikimetal">PixivSketch</a>
       </div>
     </section>
+
+    <!-- TODO: スキルセットについて追加すべきか？ -->
 
     <Footer />
   </div>
@@ -57,25 +60,28 @@ export default {
 <style lang="scss" scoped>
 @import '~/assets/css/myset.scss';
 
-// .heading {
-//   @include heading;
-//   .less {
-//     margin-right: -0.02em;
-//     margin-left: -0.08em;
-//   }
-// }
-
 .top {
-  padding: 31% 0 29%;
+  padding: 33% 0 29%;
   @include flex-center(column);
   .logotype {
-    width: 65%;
+    width: 60vw;
   }
   .sub {
-    color: $secondary;
-    font-size: 13px;
-    opacity: 0.5;
-    line-height: 1.8;
+    color: $primary;
+    font-size: 3.26vw;
+    opacity: 0.8;
+    padding-top: 0.5em;
+  }
+  @include md {
+    padding: 220px 0 210px;
+    width: 100%;
+    .logotype {
+      width: 453px;
+    }
+    .sub {
+      font-size: 20px;
+      letter-spacing: 4px;
+    }
   }
 }
 
@@ -143,7 +149,7 @@ export default {
   padding: 4% 4% 26%;
   color: $secondary;
   h1 {
-    padding-bottom: 0.9em;
+    padding-bottom: 0.83em;
     font-size: 2.1em;
     @include font-accent;
     font-weight: 900;

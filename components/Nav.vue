@@ -160,11 +160,93 @@ export default {
 
 // over md
 #global-nav-md {
-  background: red;
   @include sm {
     display: none;
     visibility: hidden;
     pointer-events: none;
+  }
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: $md-header-height;
+  @include flex-center(row);
+  align-items: stretch;
+
+  background: $md-header-color;
+  @include box-shadow(rgba($shadow-color, 0.08));
+  color: $secondary;
+  @include font-accent;
+  font-size: 20px;
+  font-weight: 700;
+  z-index: 99999;
+
+  .link {
+    width: 120px;
+    @include flex-center;
+    cursor: pointer;
+
+    &.nuxt-link-exact-active {
+      $active-color: $primary;
+      color: $active-color;
+      span {
+        position: relative;
+        &::after {
+          content: '';
+          position: absolute;
+          left: 0;
+          right: 0;
+          bottom: -0.6em;
+          margin: auto;
+          display: block;
+          width: 7px;
+          height: 7px;
+          border-radius: 50%;
+          background: rgba($active-color, 0.6);
+          animation: circle-in 0.6s $ease-out both;
+          @keyframes circle-in {
+            0% {
+              transform: scale(5);
+              opacity: 0;
+            }
+            80% {
+              transform: scale(0.9);
+              opacity: 1;
+            }
+            100% {
+              transform: scale(1);
+              opacity: 1;
+            }
+          }
+        }
+        &::before {
+          content: '';
+          position: absolute;
+          left: 0;
+          right: 0;
+          bottom: calc(-12px - 0.6em);
+          margin: auto;
+          display: block;
+          width: 1px;
+          height: 12px;
+          background: rgba($active-color, 0.6);
+          transform-origin: top;
+          animation: line-in 2s $ease-out 0.4s both;
+          @keyframes line-in {
+            0% {
+              transform: scaleY(0);
+              opacity: 0;
+            }
+            100% {
+              transform: scaleY(1);
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
   }
 }
 
