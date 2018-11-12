@@ -1,5 +1,5 @@
 <template lang="html">
-  <div>
+  <div @touchstart="() => {}">
     <div id="bg" />
     <Nav />
     <div id="page-container">
@@ -69,9 +69,12 @@ export default {
   width: 100%;
   min-height: 100vh;
   transform-origin: 50% calc(50vh + var(--scrollY));
+
+  max-width: 900px;
+  margin: 0 auto;
 }
 :root {
-  // background: $pink-pastel;
+  background: $bg-color;
 }
 #bg {
   position: fixed;
@@ -79,8 +82,6 @@ export default {
   left: 0;
   right: 0;
   bottom: 0;
-  // background: linear-gradient(35deg, hotpink, rgb(139, 102, 215));
-  // background: linear-gradient(135deg, rgb(255, 241, 249), rgb(244, 237, 255));
   background: $bg-color;
   z-index: -999;
 }

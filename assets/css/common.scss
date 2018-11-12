@@ -63,15 +63,15 @@ br {
 }
 .page-leave-to {
   opacity: 0;
-  transform: scale(0.92);
+  transform: scale(0.94);
   @include md {
     transform: scale(0.96);
   }
 }
 .page-enter {
   opacity: 0;
-  transform: scale(1.09);
+  transform: scale(1.06);
   @include md {
-    transform: scale(1.06);
+    transform: scale(1.04);
   }
 }
