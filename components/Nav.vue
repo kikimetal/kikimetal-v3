@@ -78,7 +78,7 @@ export default {
   .link {
     flex: 1 1 calc(100% / 3);
     padding: 1em;
-    padding-bottom: 16vw;
+    padding-bottom: 19vw;
     @include flex-center(row);
     transition: all 0.2s ease;
 
