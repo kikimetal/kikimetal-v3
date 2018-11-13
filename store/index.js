@@ -1,6 +1,7 @@
 import Vuex from 'vuex'
-import heads from '~/assets/heads.js'
 import ScrollOut from 'scroll-out'
+import heads from '~/assets/heads.js'
+import designItems from '~/assets/designItems.js'
 
 const store = () =>
   new Vuex.Store({
@@ -22,6 +23,11 @@ const store = () =>
 
       artItemsStatus: false,
       artItems: Array(5).fill({}),
+
+      designItems: designItems.map(item => ({
+        ...item,
+        load: false,
+      })),
     },
 
     mutations: {

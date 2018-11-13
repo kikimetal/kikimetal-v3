@@ -2,7 +2,20 @@
   <div class="page">
     <div class="heading">
       <h1 class="main"><span class="less">D</span><span class="small">ESIGN</span></h1>
-      <h2 class="sub">ききめたるのデザインワーク紹介です。</h2>
+      <!-- <h2 class="sub">ききめたるのデザインワーク紹介です。</h2> -->
+      <h2 class="sub">このページは現在制作途中です。</h2>
+    </div>
+
+    <div class="card" v-for="(item, i) in $store.state.designItems" :key="i">
+      <div
+      class="img"
+      :style="{backgroundImage: item.imgsrc ? `url(${item.imgsrc})` : 'linear-gradient(#eee, #ccc)'}">
+        <div :class="['placeholder', {hide: item.load}]">
+          <img src="~/assets/img/common/loader.svg" alt="">
+        </div>
+      </div>
+      <h1 class="message">{{ item.message || 'message...' }}</h1>
+      <img :style="{display: 'none'}" :src="item.imgsrc" @load="complete(i)">
     </div>
 
     <Footer />
@@ -15,6 +28,11 @@ import Footer from '~/components/Footer.vue'
 export default {
   components: {
     Footer,
+  },
+  methods: {
+    complete(i) {
+      this.$store.state.designItems[i].load = true
+    },
   },
   mounted() {
     this.$store.state.so()
@@ -33,6 +51,75 @@ export default {
   .less {
     margin-right: -0.06em;
     margin-left: -0.08em;
+  }
+}
+
+.card {
+  padding-bottom: 40vw;
+  @include md {
+    padding-bottom: 120px;
+  }
+
+  .img {
+    position: relative;
+    width: 92%;
+    padding-top: 51.75%;
+    @include box-shadow;
+    background: pink;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    @include md {
+      width: 700px;
+      padding-top: 400px;
+    }
+
+    .placeholder {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: #fff;
+      box-shadow: 0 0 35vw 0 rgba(117, 46, 80, 0.06) inset;
+      @include flex-center;
+      img {
+        width: 12%;
+      }
+      transition: all 0.3s ease 0.1s;
+      &.hide {
+        opacity: 0;
+      }
+    }
+  }
+
+  .message {
+    padding: 0.9em 8%;
+    width: 100%;
+    font-weight: 300;
+    font-size: 12px;
+    color: $primary;
+    @include md {
+      padding-right: calc(100% - 500px);
+    }
+  }
+
+  &:nth-of-type(even) {
+    text-align: right;
+  }
+  &:nth-of-type(odd) {
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+    .message {
+      @include md {
+        padding-right: 0;
+        padding-left: calc(100% - 500px);
+      }
+    }
   }
 }
 </style>
