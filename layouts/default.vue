@@ -64,16 +64,19 @@ export default {
 // どうもこれやるとスクロール挙動おかしい
 //   overflow-x: hidden;
 // }
-#page-container > div {
+#page-container {
   overflow: hidden;
-  width: 100%;
-  min-height: 100vh;
-  transform-origin: 50% calc(50vh + var(--scrollY));
+  & > div {
+    // overflow: hidden;
+    width: 100%;
+    min-height: 100vh;
+    transform-origin: 50% calc(50vh + var(--scrollY));
 
-  max-width: 960px;
-  margin: 0 auto;
-  @include md {
-    margin-top: $md-header-height;
+    max-width: 960px;
+    margin: 0 auto;
+    @include md {
+      margin-top: $md-header-height;
+    }
   }
 }
 :root {
@@ -86,6 +89,7 @@ export default {
   right: 0;
   bottom: 0;
   background: $bg-color;
+  // background: linear-gradient(90deg, rgb(213, 178, 235), rgb(226, 172, 205));
   z-index: -999;
 }
 </style>
