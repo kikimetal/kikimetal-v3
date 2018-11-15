@@ -39,10 +39,12 @@ $pink-pastel: rgb(250, 243, 251);
 $primary: rgb(198, 159, 180);
 $secondary: rgb(108, 97, 131);
 $bg-color: rgb(244, 236, 241);
+// $bg-color: linear-gradient(90deg, rgb(235, 237, 244), rgb(244, 236, 241));
 $shadow-color: rgba(69, 28, 66, 0.13);
 
 // $md-header-color: $bg-color;
 $md-header-color: rgb(249, 241, 245);
+$md-header-color: rgb(255, 250, 252);
 $md-header-height: 68px;
 
 @function pale($color) {

@@ -152,6 +152,7 @@ export default {
     padding-bottom: 0.83em;
     font-size: 2.1em;
     @include font-accent;
+    letter-spacing: 0.09em;
     font-weight: 900;
   }
   p {

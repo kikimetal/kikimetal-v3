@@ -66,10 +66,11 @@ export default {
   height: 30vw;
   font-size: 13px;
   font-weight: 700;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.14em;
   line-height: 1;
-  text-transform: uppercase;
-  color: $secondary;
+  // text-transform: uppercase;
+  // color: $secondary;
+  color: rgba($secondary, 0.8);
   background: $bg-color;
   @include box-shadow;
   cursor: pointer;
@@ -176,11 +177,13 @@ export default {
   align-items: stretch;
 
   background: $md-header-color;
+
   @include box-shadow(rgba($shadow-color, 0.08));
-  color: $secondary;
+  color: rgba($secondary, 0.8);
   @include font-accent;
   font-size: 20px;
   font-weight: 700;
+  letter-spacing: 0.1em;
   z-index: 99999;
 
   .link {
