@@ -5,6 +5,8 @@
     <div id="page-container">
       <nuxt/>
     </div>
+    <!-- preload first art item image -->
+    <img :style="{display: 'none'}" :src="$store.state.artItems[0].imgsrc">
     <!-- Typekit kikimetal.com -->
     <script>
     (function(d){

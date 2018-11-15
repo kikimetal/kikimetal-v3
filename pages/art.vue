@@ -6,7 +6,12 @@
       <h2 class="sub">ききめたるのイラストレーション作品です。</h2>
     </div>
 
-    <div class="card" v-for="(item, i) in $store.state.artItems" :key="i">
+    <div
+    class="card"
+    v-for="(item, i) in $store.state.artItems"
+    :key="i"
+    v-if="!i || $store.state.artItems[i - 1].load"
+    >
       <div
       data-scroll
       data-scroll-type="slide"
