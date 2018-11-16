@@ -10,8 +10,8 @@
     class="card"
     v-for="(item, i) in $store.state.artItems"
     :key="i"
-    v-if="!i || $store.state.artItems[i - 1].load"
     >
+    <!-- v-if="!i || $store.state.artItems[i - 1].load" -->
       <div
       data-scroll
       data-scroll-type="slide"
