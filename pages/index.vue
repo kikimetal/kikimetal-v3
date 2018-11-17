@@ -8,25 +8,26 @@
     </div> -->
 
     <div class="top">
-      <Logotype class="logotype" fill="rgb(198, 159, 180)" />
-      <h2 class="sub">好きなものを好きと言えるチカラが欲しい</h2>
+      <!-- <Logotype class="logotype" fill="rgb(198, 159, 180)" /> -->
+      <Logotype class="logotype" fill="rgb(245, 219, 234)" />
+      <h2 class="sub">好きなものを好きと言うチカラ</h2>
     </div>
 
     <router-link exact to="/art" class="link-card to-art">
-      <div class="box"></div>
+      <div class="box" />
       <div class="text">イラストをみる</div>
     </router-link>
 
     <router-link exact to="/design" class="link-card to-design">
-      <div class="box"></div>
+      <div class="box" />
       <div class="text">デザインをみる</div>
     </router-link>
 
     <section class="about-me">
       <h1>About me</h1>
-      <p>好きなものを好きというためのチカラが欲しい！</p>
-      <p>少しでも多くの想いを形にしていくために、日々修行中のデザインラーナーです。</p>
-      <p>東京でフリーランスのWEB/アプリ制作をしています。</p>
+      <p>"かわいさと力強さ"の想いを形にしていくために、日々修行中のデザインラーナーです。</p>
+      <p>東京でWEBサイト/アプリ制作をしています。</p>
+      <p>お仕事のご相談は、TwitterのDMから気軽にご連絡ください。</p>
       <div class="sns">
         <a class="link-btn" href="https://twitter.com/qiqimetal">Twitter</a>
         <a class="link-btn" href="https://sketch.pixiv.net/@kikimetal">PixivSketch</a>
@@ -67,20 +68,21 @@ export default {
     width: 60vw;
   }
   .sub {
-    color: $primary;
-    font-size: 3.26vw;
-    opacity: 0.8;
     padding-top: 0.5em;
+    padding-left: 0.5em;
+    color: rgb(236, 206, 223);
+    font-size: 2.77vw;
+    letter-spacing: 0.62em;
   }
   @include md {
     padding: 220px 0 210px;
     width: 100%;
     .logotype {
-      width: 453px;
+      width: 374px;
     }
     .sub {
-      font-size: 20px;
-      letter-spacing: 4px;
+      font-size: 17px;
+      // letter-spacing: 4px;
     }
   }
 }
@@ -95,6 +97,7 @@ export default {
   font-weight: 600;
   line-height: 1.4;
   color: $primary;
+
   .box {
     position: relative;
     width: 60%;
@@ -105,6 +108,8 @@ export default {
     background-size: cover;
     border-radius: 4px;
     @include box-shadow;
+    transition: all 0.3s $ease-out-back;
+
     &::after {
       content: '';
       position: absolute;
@@ -116,6 +121,9 @@ export default {
       transition: all 0.3s ease;
     }
     &:hover {
+      @include md {
+        transform: scale(0.98);
+      }
       &::after {
         opacity: 0.3;
       }
@@ -123,8 +131,8 @@ export default {
   }
   .text {
     font-size: 0.96em;
-    font-weight: 300;
-    line-height: 2.6;
+    font-weight: 500;
+    padding: 1.2em 0 0.4em;
     border-bottom: 1px solid rgba($primary, 0.5);
   }
 
@@ -137,6 +145,7 @@ export default {
       background-image: url('~assets/img/to-art.jpg');
     }
   }
+
   &.to-design {
     .box {
       background-image: url('~assets/img/to-design.jpg');
@@ -147,25 +156,31 @@ export default {
 // about me
 .about-me {
   padding: 4% 4% 26%;
-  color: $secondary;
+  font-size: 15px;
+  @include md {
+    font-size: 17px;
+  }
   h1 {
-    padding-bottom: 0.83em;
+    color: $primary;
+    padding-bottom: 0.8em;
     font-size: 2.1em;
     @include font-accent;
     letter-spacing: 0.09em;
     font-weight: 900;
+    opacity: 0.4;
   }
   p {
+    color: $secondary;
     line-height: 1.5;
     font-size: 1em;
-    font-weight: 300;
+    font-weight: 400;
     opacity: 0.8;
   }
 }
 
 // sns
 .sns {
-  padding: 2.2em 0;
+  padding: 2.4em 0;
   .link-btn {
     padding: 0.6em 0;
     margin-right: 1.2em;
@@ -177,6 +192,11 @@ export default {
     @include font-accent;
     font-weight: 700;
     @include box-shadow;
+    transition: all 0.3s $ease-out;
+    &:hover {
+      background: $primary;
+      color: $bg-color;
+    }
   }
 }
 </style>

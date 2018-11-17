@@ -2,8 +2,9 @@
   <div class="page">
 
     <div class="heading">
-      <h1 class="main">A<span class="small">RT</span></h1>
-      <h2 class="sub">ききめたるのイラストレーション作品です。</h2>
+      <h1 class="main">A<span class="small">rt</span></h1>
+      <h2 class="sub">ふわふわでもちもちな</h2>
+      <h2 class="sub">お姉さんと夢の中で</h2>
     </div>
 
     <div
@@ -103,6 +104,7 @@ export default {
     width: 100%;
     font-weight: 300;
     font-size: 12px;
+    letter-spacing: 0.3em;
     color: $primary;
     @include md {
       padding-right: calc(100% - 500px);

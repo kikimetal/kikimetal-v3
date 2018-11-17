@@ -74,7 +74,7 @@ export default {
     min-height: 100vh;
     transform-origin: 50% calc(50vh + var(--scrollY));
 
-    max-width: 960px;
+    max-width: $page-max-width;
     margin: 0 auto;
     @include md {
       margin-top: $md-header-height;

@@ -17,9 +17,7 @@ footer {
   padding-top: 2.5em;
   width: 100%;
   height: 200px;
-  // background: $secondary;
-  background: linear-gradient(180deg, $primary, $bg-color);
-  color: $white;
+  color: $secondary;
   text-align: center;
   font-size: 12px;
   p {

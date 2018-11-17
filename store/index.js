@@ -32,7 +32,7 @@ const store = () =>
 
     mutations: {
       setIsScrollTop(state) {
-        const isScrollTop = window.scrollY < 100
+        const isScrollTop = window.scrollY < 50
         if (state.isScrollTop === isScrollTop) return
         state.isScrollTop = isScrollTop
       },

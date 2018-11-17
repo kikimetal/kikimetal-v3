@@ -1,7 +1,8 @@
 <template lang="html">
   <div class="page">
     <div class="heading">
-      <h1 class="main"><span class="less">D</span><span class="small">ESIGN</span></h1>
+      <!-- <h1 class="main"><span class="less">D</span><span class="small">ESIGN</span></h1> -->
+      <h1 class="main"><span class="less">D</span><span class="small">esign</span></h1>
       <!-- <h2 class="sub">ききめたるのデザインワーク紹介です。</h2> -->
       <h2 class="sub">このページは現在制作途中です。</h2>
     </div>
@@ -49,7 +50,7 @@ export default {
 .heading {
   @include heading;
   .less {
-    margin-right: -0.06em;
+    margin-right: -0.09em;
     margin-left: -0.08em;
   }
 }

@@ -64,14 +64,17 @@ export default {
   justify-content: space-around;
   width: 100%;
   height: 30vw;
-  font-size: 13px;
-  font-weight: 700;
-  letter-spacing: 0.14em;
+  @include font-accent;
+  font-size: 15px;
+  font-weight: 900;
+  letter-spacing: 0.16em;
   line-height: 1;
-  // text-transform: uppercase;
-  // color: $secondary;
-  color: rgba($secondary, 0.8);
-  background: $bg-color;
+
+  // background: $nav-bg-color;
+  background: $white;
+  // color: $bg-color;
+  color: rgba($secondary, 0.6);
+
   @include box-shadow;
   cursor: pointer;
   z-index: 9999;
@@ -79,7 +82,7 @@ export default {
   .link {
     flex: 1 1 calc(100% / 3);
     padding: 1em;
-    padding-bottom: 19vw;
+    padding-bottom: 23vw;
     @include flex-center(row);
     transition: all 0.2s ease;
 
@@ -98,7 +101,8 @@ export default {
     }
 
     &.nuxt-link-exact-active {
-      $active-color: $primary;
+      // $active-color: rgba($secondary, 0.4);
+      $active-color: rgba($primary, 1);
       color: $active-color;
       span {
         position: relative;
@@ -113,7 +117,7 @@ export default {
           width: 7px;
           height: 7px;
           border-radius: 50%;
-          background: rgba($active-color, 0.6);
+          background: rgba($active-color, 0.3);
           animation: circle-in 0.6s $ease-out both;
           @keyframes circle-in {
             0% {
@@ -140,7 +144,7 @@ export default {
           display: block;
           width: 1px;
           height: 9vw;
-          background: rgba($active-color, 0.6);
+          background: rgba($active-color, 0.2);
           transform-origin: top;
           animation: line-in 2s $ease-out 0.4s both;
           @keyframes line-in {
@@ -172,17 +176,25 @@ export default {
   left: 0;
   right: 0;
   width: 100%;
-  height: $md-header-height;
+  height: 56px;
+  padding-bottom: 2px;
   @include flex-center(row);
   align-items: stretch;
 
-  background: $md-header-color;
+  @media screen and (min-width: $page-max-width) {
+    padding: 0 calc((100vw - 960px) / 2);
+    justify-content: flex-end;
+  }
+
+  // background: $nav-bg-color;
+  background: $white;
+  // color: $bg-color;
+  color: rgba($secondary, 0.6);
 
   @include box-shadow(rgba($shadow-color, 0.08));
-  color: rgba($secondary, 0.8);
   @include font-accent;
-  font-size: 20px;
-  font-weight: 700;
+  font-size: 19px;
+  font-weight: 900;
   letter-spacing: 0.1em;
   z-index: 99999;
 
@@ -190,8 +202,12 @@ export default {
     width: 120px;
     @include flex-center;
     cursor: pointer;
+    &:hover {
+      text-decoration: underline;
+    }
 
     &.nuxt-link-exact-active {
+      // $active-color: rgba($secondary, 0.4);
       $active-color: $primary;
       color: $active-color;
       span {
@@ -201,13 +217,13 @@ export default {
           position: absolute;
           left: 0;
           right: 0;
-          bottom: -0.6em;
+          bottom: -0.45em;
           margin: auto;
           display: block;
-          width: 7px;
-          height: 7px;
+          width: 6px;
+          height: 6px;
           border-radius: 50%;
-          background: rgba($active-color, 0.6);
+          background: rgba($active-color, 0.3);
           animation: circle-in 0.6s $ease-out both;
           @keyframes circle-in {
             0% {
@@ -224,30 +240,30 @@ export default {
             }
           }
         }
-        &::before {
-          content: '';
-          position: absolute;
-          left: 0;
-          right: 0;
-          bottom: calc(-12px - 0.6em);
-          margin: auto;
-          display: block;
-          width: 1px;
-          height: 12px;
-          background: rgba($active-color, 0.6);
-          transform-origin: top;
-          animation: line-in 2s $ease-out 0.4s both;
-          @keyframes line-in {
-            0% {
-              transform: scaleY(0);
-              opacity: 0;
-            }
-            100% {
-              transform: scaleY(1);
-              opacity: 1;
-            }
-          }
-        }
+        // &::before {
+        //   content: '';
+        //   position: absolute;
+        //   left: 0;
+        //   right: 0;
+        //   bottom: calc(-12px - 0.6em);
+        //   margin: auto;
+        //   display: block;
+        //   width: 1px;
+        //   height: 12px;
+        //   background: rgba($active-color, 0.2);
+        //   transform-origin: top;
+        //   animation: line-in 2s $ease-out 0.4s both;
+        //   @keyframes line-in {
+        //     0% {
+        //       transform: scaleY(0);
+        //       opacity: 0;
+        //     }
+        //     100% {
+        //       transform: scaleY(1);
+        //       opacity: 1;
+        //     }
+        //   }
+        // }
       }
     }
   }
