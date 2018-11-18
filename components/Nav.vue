@@ -178,8 +178,8 @@ $nav-color-text-active: $primary;
   left: 0;
   right: 0;
   width: 100%;
-  height: 56px;
-  padding-bottom: 2px;
+  height: 57px;
+  // padding-bottom: 2px;
   @include flex-center(row);
   align-items: stretch;
 
