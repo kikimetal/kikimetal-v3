@@ -46,6 +46,10 @@ export default {
 <style lang="scss" scoped>
 @import '~/assets/css/myset.scss';
 
+$nav-color-bg: $white;
+$nav-color-text: rgba($secondary, 0.9);
+$nav-color-text-active: $primary;
+
 // only sm
 #global-nav-sm {
   @include md {
@@ -65,15 +69,14 @@ export default {
   width: 100%;
   height: 30vw;
   @include font-accent;
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 900;
   letter-spacing: 0.16em;
   line-height: 1;
 
-  // background: $nav-bg-color;
-  background: $white;
-  // color: $bg-color;
-  color: rgba($secondary, 0.6);
+  background: $nav-color-bg;
+  color: $nav-color-text;
+  border-top: 1px solid rgba($primary, 0.16);
 
   @include box-shadow;
   cursor: pointer;
@@ -101,8 +104,7 @@ export default {
     }
 
     &.nuxt-link-exact-active {
-      // $active-color: rgba($secondary, 0.4);
-      $active-color: rgba($primary, 1);
+      $active-color: $nav-color-text-active;
       color: $active-color;
       span {
         position: relative;
@@ -181,17 +183,16 @@ export default {
   @include flex-center(row);
   align-items: stretch;
 
-  @media screen and (min-width: $page-max-width) {
-    padding: 0 calc((100vw - 960px) / 2);
-    justify-content: flex-end;
-  }
+  // @media screen and (min-width: $page-max-width) {
+  //   padding: 0 calc((100vw - 960px) / 2);
+  //   justify-content: flex-end;
+  // }
 
-  // background: $nav-bg-color;
-  background: $white;
-  // color: $bg-color;
-  color: rgba($secondary, 0.6);
+  background: $nav-color-bg;
+  color: $nav-color-text;
+  border-bottom: 1px solid rgba($primary, 0.16);
+  @include box-shadow(rgba($shadow-color, 0.02));
 
-  @include box-shadow(rgba($shadow-color, 0.08));
   @include font-accent;
   font-size: 19px;
   font-weight: 900;
@@ -199,7 +200,10 @@ export default {
   z-index: 99999;
 
   .link {
-    width: 120px;
+    width: 140px;
+    @media screen and (min-width: $page-max-width) {
+      width: 200px;
+    }
     @include flex-center;
     cursor: pointer;
     &:hover {
@@ -207,8 +211,7 @@ export default {
     }
 
     &.nuxt-link-exact-active {
-      // $active-color: rgba($secondary, 0.4);
-      $active-color: $primary;
+      $active-color: $nav-color-text-active;
       color: $active-color;
       span {
         position: relative;

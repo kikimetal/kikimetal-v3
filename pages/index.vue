@@ -121,9 +121,9 @@ export default {
       transition: all 0.3s ease;
     }
     &:hover {
-      @include md {
-        transform: scale(0.98);
-      }
+      // @include md {
+      //   transform: scale(0.98);
+      // }
       &::after {
         opacity: 0.3;
       }
