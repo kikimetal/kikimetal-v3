@@ -21,25 +21,27 @@
       </h2>
     </div>
 
-    <div
-    class="card"
-    v-for="(item, i) in $store.state.artItems"
-    :key="i"
-    v-if="!i || $store.state.artItems[i - 1].load"
-    >
+    <section class="art-container">
       <div
-      data-scroll
-      data-scroll-type="slide"
-      :data-scroll-direction="i%2 === 0 ? 'reverse' : ''"
-      class="img"
-      :style="{backgroundImage: item.imgsrc ? `url(${item.imgsrc})` : 'linear-gradient(#eee, #ccc)'}">
-        <div :class="['placeholder', {hide: item.load}]">
-          <img src="~/assets/img/common/loader.svg" alt="">
+      class="card"
+      v-for="(item, i) in $store.state.artItems"
+      :key="i"
+      v-if="!i || $store.state.artItems[i - 1].load"
+      >
+        <div
+        data-scroll
+        data-scroll-type="slide"
+        :data-scroll-direction="i%2 === 0 ? 'reverse' : ''"
+        class="img"
+        :style="{backgroundImage: item.imgsrc ? `url(${item.imgsrc})` : 'linear-gradient(#eee, #ccc)'}">
+          <div :class="['placeholder', {hide: item.load}]">
+            <img src="~/assets/img/common/loader.svg" alt="">
+          </div>
         </div>
+        <h1 class="message">{{ item.message || 'message...' }}</h1>
+        <img :style="{display: 'none'}" :src="item.imgsrc" @load="complete(i)">
       </div>
-      <h1 class="message">{{ item.message || 'message...' }}</h1>
-      <img :style="{display: 'none'}" :src="item.imgsrc" @load="complete(i)">
-    </div>
+    </section>
 
     <Footer />
   </div>
@@ -89,7 +91,7 @@ export default {
         font-size: 48px;
       }
       display: inline-block;
-      animation: char-in 3s infinite alternate both;
+      animation: char-in ease 3s infinite alternate both;
       @keyframes char-in {
         from {
           opacity: 0.3;
@@ -104,9 +106,23 @@ export default {
   }
 }
 
+.art-container {
+  animation: fade-in-art-container 1s ease both 0.5s;
+  @keyframes fade-in-art-container {
+    from {
+      transform: translateY(100px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+}
+
 .card {
   padding-bottom: 40vw;
-  &:last-of-type {
+  &:last-child {
     padding-bottom: 30px;
   }
   @include md {
@@ -122,7 +138,6 @@ export default {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    // border: 4px solid #333;
     border: 4px solid $secondary;
 
     @include md {
@@ -161,11 +176,11 @@ export default {
     }
   }
 
-  &:nth-of-type(even) {
+  &:nth-child(even) {
     text-align: right;
     padding-left: 5px;
   }
-  &:nth-of-type(odd) {
+  &:nth-child(odd) {
     padding-right: 5px;
     width: 100%;
     display: flex;
