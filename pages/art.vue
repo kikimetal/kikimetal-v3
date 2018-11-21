@@ -2,9 +2,23 @@
   <div class="page">
 
     <div class="heading">
-      <h1 class="main">A<span class="small">rt</span></h1>
-      <h2 class="sub">ふわふわでもちもちな</h2>
-      <h2 class="sub">お姉さんと夢の中で</h2>
+      <!-- <h1 class="main">A<span class="small">rt</span></h1> -->
+      <h2 class="fuwafuwa">
+        <!-- 文字列分解はどっちでもできるけど、Array.from はUnicodeサロゲートペア(絵文字など)もサポートしてるようだ -->
+        <!-- 'ふわふわでもちもちな'.split('')" -->
+        <!-- Array.from('ふわふわでもちもちな')" -->
+        <span
+        v-for="(char, i) in Array.from('ふわふわでもちもちな')"
+        :key="i"
+        :style="{animationDelay: `${i * 400}ms`}"
+        >{{ char }}</span>
+        <br class="md">
+        <span
+        v-for="(char, i) in 'お姉さんと夢の中で'.split('')"
+        :key="i"
+        :style="{animationDelay: `${i * 400 - 3000}ms`}"
+        >{{ char }}</span>
+      </h2>
     </div>
 
     <div
@@ -57,7 +71,37 @@ export default {
 @import '~/assets/css/myset.scss';
 
 .heading {
-  @include heading;
+  padding: 0 8% 28px;
+  width: 100%;
+  height: 480px;
+  @include flex-center(column);
+  color: $primary;
+  @include font-accent;
+  .fuwafuwa {
+    padding-left: 19px;
+    font-weight: 300;
+    line-height: 1.5;
+    font-size: 0;
+    span {
+      width: 1.3em;
+      font-size: 11.7vw;
+      @include md {
+        font-size: 48px;
+      }
+      display: inline-block;
+      animation: char-in 3s infinite alternate both;
+      @keyframes char-in {
+        from {
+          opacity: 0.3;
+          transform: scale(0.7);
+        }
+        to {
+          opacity: 1;
+          transform: scale(0.4);
+        }
+      }
+    }
+  }
 }
 
 .card {

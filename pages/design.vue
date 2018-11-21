@@ -1,10 +1,7 @@
 <template lang="html">
   <div class="page">
     <div class="heading">
-      <!-- <h1 class="main"><span class="less">D</span><span class="small">ESIGN</span></h1> -->
-      <h1 class="main"><span class="less">D</span><span class="small">esign</span></h1>
-      <!-- <h2 class="sub">直近のデザインワークの紹介です。</h2> -->
-      <h2 class="sub">このページは現在制作途中です。</h2>
+      このページは現在制作途中です。
     </div>
 
     <div class="card" v-for="(item, i) in $store.state.designItems" :key="i">
@@ -48,11 +45,10 @@ export default {
 @import '~/assets/css/myset.scss';
 
 .heading {
-  @include heading;
-  .less {
-    margin-right: -0.09em;
-    margin-left: -0.08em;
-  }
+  color: $secondary;
+  font-size: 22px;
+  height: 300px;
+  color: red;
 }
 
 .card {
