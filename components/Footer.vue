@@ -14,25 +14,16 @@ export default {}
 @import '~/assets/css/myset.scss';
 
 footer {
-  padding-top: 2.5em;
+  padding: 40% 0 12%;
   width: 100%;
-  height: 200px;
   color: $secondary;
   text-align: center;
   font-size: 12px;
   p {
-    opacity: 0.7;
+    opacity: 0.6;
   }
-
   @include md {
-    background: transparent;
-    color: $secondary;
-    p {
-      margin: 0 auto;
-      width: 14em;
-      line-height: 3;
-      border-bottom: 1px solid rgba($secondary, 0.2);
-    }
+    padding: 200px 0 3em;
   }
 }
 </style>

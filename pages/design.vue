@@ -3,7 +3,7 @@
     <div class="heading">
       <!-- <h1 class="main"><span class="less">D</span><span class="small">ESIGN</span></h1> -->
       <h1 class="main"><span class="less">D</span><span class="small">esign</span></h1>
-      <!-- <h2 class="sub">ききめたるのデザインワーク紹介です。</h2> -->
+      <!-- <h2 class="sub">直近のデザインワークの紹介です。</h2> -->
       <h2 class="sub">このページは現在制作途中です。</h2>
     </div>
 
@@ -64,7 +64,8 @@ export default {
   .img {
     position: relative;
     width: 92%;
-    padding-top: 51.75%;
+    // padding-top: 51.75%;
+    padding-top: 150%;
     @include box-shadow;
     background: pink;
     background-repeat: no-repeat;
@@ -73,8 +74,24 @@ export default {
 
     @include md {
       width: 700px;
-      padding-top: 400px;
+      // padding-top: 400px;
+      padding-top: 600px;
     }
+
+    // &::before {
+    //   content: '';
+    //   position: absolute;
+    //   top: 0;
+    //   left: 0;
+    //   display: block;
+    //   width: inherit;
+    //   padding-top: inherit;
+    //   background: inherit;
+    //   background-image: inherit;
+    //   transform: translate(30px, 30px);
+    //   filter: brightness(90%) blur(30px);
+    //   z-index: -1;
+    // }
 
     .placeholder {
       position: absolute;

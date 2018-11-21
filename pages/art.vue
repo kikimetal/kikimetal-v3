@@ -11,8 +11,8 @@
     class="card"
     v-for="(item, i) in $store.state.artItems"
     :key="i"
+    v-if="!i || $store.state.artItems[i - 1].load"
     >
-    <!-- v-if="!i || $store.state.artItems[i - 1].load" -->
       <div
       data-scroll
       data-scroll-type="slide"
@@ -41,6 +41,7 @@ export default {
   methods: {
     complete(i) {
       this.$store.state.artItems[i].load = true
+      this.$store.state.so()
     },
   },
   mounted() {
@@ -61,6 +62,9 @@ export default {
 
 .card {
   padding-bottom: 40vw;
+  &:last-of-type {
+    padding-bottom: 30px;
+  }
   @include md {
     padding-bottom: 120px;
   }
@@ -74,6 +78,8 @@ export default {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    // border: 4px solid #333;
+    border: 4px solid $secondary;
 
     @include md {
       width: 500px;
@@ -113,8 +119,10 @@ export default {
 
   &:nth-of-type(even) {
     text-align: right;
+    padding-left: 5px;
   }
   &:nth-of-type(odd) {
+    padding-right: 5px;
     width: 100%;
     display: flex;
     flex-flow: column;

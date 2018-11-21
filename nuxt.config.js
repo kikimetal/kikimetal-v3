@@ -8,7 +8,7 @@ module.exports = {
   */
   head: {
     // title: pkg.name,
-    title: 'KIKIMETAL | ききめたる',
+    title: 'KIKIMETAL ききめたる',
     meta: [
       { charset: 'utf-8' },
       {

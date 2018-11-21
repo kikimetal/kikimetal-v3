@@ -19,6 +19,7 @@ const store = () =>
             // viewportY: true,
             visibleY: true,
           },
+          once: true,
         }),
 
       artItemsStatus: false,

@@ -9,21 +9,12 @@
 
     <div class="top">
       <!-- <Logotype class="logotype" fill="rgb(198, 159, 180)" /> -->
+      <div class="img"/>
       <Logotype class="logotype" fill="rgb(245, 219, 234)" />
       <h2 class="sub">好きなものを好きと言うチカラ</h2>
     </div>
 
-    <router-link exact to="/art" class="link-card to-art">
-      <div class="box" />
-      <div class="text">イラストをみる</div>
-    </router-link>
-
-    <router-link exact to="/design" class="link-card to-design">
-      <div class="box" />
-      <div class="text">デザインをみる</div>
-    </router-link>
-
-    <section class="about-me">
+    <section class="about-me" data-scroll data-scroll-type="slide-up">
       <h1>About me</h1>
       <p>"かわいさと力強さ"の想いを形にしていくために、日々修行中のデザインラーナーです。</p>
       <p>東京でWEBサイト/アプリ制作をしています。</p>
@@ -33,6 +24,16 @@
         <a class="link-btn" href="https://sketch.pixiv.net/@kikimetal">PixivSketch</a>
       </div>
     </section>
+
+    <router-link exact to="/art" class="link-card to-art" data-scroll data-scroll-type="slide">
+      <div class="box" />
+      <div class="text">イラストをみる</div>
+    </router-link>
+
+    <router-link exact to="/design" class="link-card to-design" data-scroll data-scroll-type="slide" data-scroll-direction='reverse'>
+      <div class="box" />
+      <div class="text">デザインをみる</div>
+    </router-link>
 
     <!-- TODO: スキルセットについて追加すべきか？ -->
 
@@ -62,7 +63,7 @@ export default {
 @import '~/assets/css/myset.scss';
 
 .top {
-  padding: 33% 0 29%;
+  padding: 33% 0 35%;
   @include flex-center(column);
   .logotype {
     width: 60vw;
@@ -74,21 +75,35 @@ export default {
     font-size: 2.77vw;
     letter-spacing: 0.62em;
   }
+  .img {
+    margin-bottom: 10px;
+    width: 60vw;
+    padding-top: calc(60vw * 0.6);
+    background-image: url('~assets/img/top.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border: 3px solid $secondary;
+  }
   @include md {
-    padding: 220px 0 210px;
-    width: 100%;
+    padding: 0;
+    padding-bottom: 8vh;
+    height: calc(100vh - 90px);
     .logotype {
       width: 374px;
     }
+    .img {
+      width: 374px;
+      padding-top: calc(374px * 0.6);
+    }
     .sub {
       font-size: 17px;
-      // letter-spacing: 4px;
     }
   }
 }
 
 .link-card {
-  padding: 1em 1em 23%;
+  margin: 37% 1em 1em;
   display: flex;
   flex-flow: column;
   justify-content: flex-start;
@@ -97,18 +112,25 @@ export default {
   font-weight: 600;
   line-height: 1.4;
   color: $primary;
+  @include md {
+    margin: 20% 1em 1em;
+  }
 
   .box {
     position: relative;
-    width: 60%;
-    padding-top: 60%;
+    width: 80%;
+    padding-top: 78%;
     background: pink;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    border-radius: 4px;
+    border: 12px solid $white;
     @include box-shadow;
-    transition: all 0.3s $ease-out-back;
+    box-shadow: 0 4px 21px 0 $shadow-color;
+    @include md {
+      width: 60%;
+      padding-top: 58%;
+    }
 
     &::after {
       content: '';
@@ -121,9 +143,7 @@ export default {
       transition: all 0.3s ease;
     }
     &:hover {
-      // @include md {
-      //   transform: scale(0.98);
-      // }
+      @include touchme;
       &::after {
         opacity: 0.3;
       }
@@ -133,10 +153,10 @@ export default {
     font-size: 0.96em;
     font-weight: 500;
     padding: 1.2em 0 0.4em;
-    border-bottom: 1px solid rgba($primary, 0.5);
+    border-bottom: 3px solid rgba($primary, 0.5);
   }
 
-  &:nth-of-type(even) {
+  &:nth-of-type(odd) {
     align-items: flex-end;
   }
 
@@ -155,23 +175,25 @@ export default {
 
 // about me
 .about-me {
-  padding: 4% 4% 26%;
-  font-size: 15px;
+  // padding: 0 6%;
+  padding: 0 2em;
+  font-size: 14px;
   @include md {
-    font-size: 17px;
+    font-size: 15px;
   }
   h1 {
-    color: $primary;
-    padding-bottom: 0.8em;
-    font-size: 2.1em;
+    // color: $primary;
+    color: $secondary;
+    padding-bottom: 1.7em;
+    font-size: 1.2em;
     @include font-accent;
+    text-transform: uppercase;
     letter-spacing: 0.09em;
-    font-weight: 900;
-    opacity: 0.4;
+    font-weight: 700;
   }
   p {
     color: $secondary;
-    line-height: 1.5;
+    line-height: 2.4;
     font-size: 1em;
     font-weight: 400;
     opacity: 0.8;
@@ -180,7 +202,7 @@ export default {
 
 // sns
 .sns {
-  padding: 2.4em 0;
+  padding: 2.8em 0;
   .link-btn {
     padding: 0.6em 0;
     margin-right: 1.2em;
@@ -194,6 +216,10 @@ export default {
     @include box-shadow;
     transition: all 0.3s $ease-out;
     &:hover {
+      @include touchme(0.94);
+      @include md {
+        @include touchme(0.98);
+      }
       background: $primary;
       color: $bg-color;
     }

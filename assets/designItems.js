@@ -1,6 +1,12 @@
 const designItems = [
   {
     title: 'Bulgarian Rose Cultual Association',
+    imgsrc: require('~/assets/img/design/dribbble-shot.png'),
+    url: 'https://www.rosedarena.com/ec/html/',
+    skill: 'PHP, HTML, CSS, JavaScript, EC-Cube',
+  },
+  {
+    title: 'Bulgarian Rose Cultual Association',
     imgsrc: require('~/assets/img/design/brca.jpg'),
     url: 'https://www.rosedarena.com/ec/html/',
     skill: 'PHP, HTML, CSS, JavaScript, EC-Cube',

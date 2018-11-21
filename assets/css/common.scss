@@ -43,6 +43,22 @@ br {
     }
   }
 }
+// type slide-up
+// [data-scroll][data-scroll-type='slide-up'] {
+//   transition: 2s transform $ease-out, 2s opacity ease;
+// }
+[data-scroll='in'][data-scroll-type='slide-up'] {
+  transition: 2s transform $ease-out, 2s opacity ease;
+  opacity: 1;
+  transform: translateY(0);
+}
+[data-scroll='out'][data-scroll-type='slide-up'] {
+  opacity: 0;
+  transform: translateY(100px);
+  @include md {
+    transform: translateY(160px);
+  }
+}
 // type visibleY
 [data-scroll][data-scroll-type='visible-y'] {
   transition: none;

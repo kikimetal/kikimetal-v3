@@ -69,15 +69,14 @@ export default {
 #page-container {
   overflow: hidden;
   & > div {
-    // overflow: hidden;
     width: 100%;
     min-height: 100vh;
     transform-origin: 50% calc(50vh + var(--scrollY));
-
     max-width: $page-max-width;
     margin: 0 auto;
+    margin-top: $header-height-sm;
     @include md {
-      margin-top: $md-header-height;
+      margin-top: $header-height-md;
     }
   }
 }
