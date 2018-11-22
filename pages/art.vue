@@ -2,7 +2,6 @@
   <div class="page">
 
     <div class="heading">
-      <!-- <h1 class="main">A<span class="small">rt</span></h1> -->
       <h2 class="fuwafuwa">
         <!-- 文字列分解はどっちでもできるけど、Array.from はUnicodeサロゲートペア(絵文字など)もサポートしてるようだ -->
         <!-- 'ふわふわでもちもちな'.split('')" -->
@@ -107,7 +106,7 @@ export default {
 }
 
 .art-container {
-  animation: fade-in-art-container 1s ease both 0.5s;
+  animation: fade-in-art-container 2.2s $ease-out both 1s;
   @keyframes fade-in-art-container {
     from {
       transform: translateY(100px);

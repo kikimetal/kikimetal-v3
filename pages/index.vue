@@ -16,7 +16,7 @@
 
     <section class="about-me" data-scroll data-scroll-type="slide-up">
       <h1>About me</h1>
-      <p>"かわいさと力強さ"の想いを形にしていくために、日々修行中のデザインラーナーです。</p>
+      <p>"かわいさと力強さ"の想いを形にしていくため日々修行中のデザインラーナーです。</p>
       <p>東京でWEBサイト/アプリ制作をしています。</p>
       <p>お仕事のご相談は、TwitterのDMから気軽にご連絡ください。</p>
       <div class="sns">
