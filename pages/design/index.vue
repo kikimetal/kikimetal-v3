@@ -1,16 +1,32 @@
 <template lang="html">
   <div class="page">
     <div class="page-heading">
-      このページは現在制作途中です。
+      <!-- このページは現在制作途中です。 -->
+      <div id="animation-container">
+        <!-- cf. https://codepen.io/anon/pen/rQdzeE -->
+        <div class="box">
+          <div class="spin-container">
+            <div class="shape">
+              <div class="bd"></div>
+            </div>
+          </div>
+          <div class="spin-container">
+            <div class="shape">
+              <div class="bd"></div>
+            </div>
+          </div>
+          <h1 class="text">DESiGN.</h1>
+        </div>
+      </div>
     </div>
 
-    <div
-    class="card"
-    v-for="(item, i) in $store.state.designItems"
-    :key="i"
-    :id="item.pathname"
-    >
-
+    <div class="card-container">
+      <div
+      class="card"
+      v-for="(item, i) in $store.state.designItems"
+      :key="i"
+      :id="item.pathname"
+      >
       <div data-scroll data-scroll-type="slide-up">
         <a v-if="item.linkIsExternal" :href="item.linkto">
           <div class="img" :style="{backgroundImage: `url(${item.imgsrc})`}">
@@ -58,8 +74,9 @@
       <p class="comment" data-scroll data-scroll-type="slide-up">
         {{ item.comment || 'comment...' }}
       </p>
-      
+
       <img :style="{display: 'none'}" :src="item.imgsrc" @load="complete(i)">
+    </div>
     </div>
 
     <Footer />
@@ -90,8 +107,144 @@ export default {
 @import '~/assets/css/myset.scss';
 
 .page-heading {
-  font-size: 13px;
-  color: red;
+  padding: 0 8% 28px;
+  width: 100%;
+  height: 480px;
+  @include flex-center(column);
+  color: $primary;
+  @include font-accent;
+  @include md {
+    margin: 140px 0 70px;
+  }
+
+  #animation-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: visible;
+
+    .box {
+      width: 60vmin;
+      height: 60vmin;
+      border: 1px dashed rgba(255, 255, 255, 0.4);
+      position: relative;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        border-radius: 50%;
+        border: 1px dashed rgba(255, 255, 255, 0.4);
+        transform: scale(1.42);
+      }
+
+      .text {
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding-left: 1em;
+        width: 100%;
+        height: 100%;
+        @include flex-center;
+        @include font-accent;
+        font-weight: 900;
+        letter-spacing: 0.5em;
+        color: $white;
+        @include md {
+          font-size: 1.2em;
+        }
+      }
+
+      .spin-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        animation: spin 24s linear infinite;
+
+        .shape {
+          width: 100%;
+          height: 100%;
+          transition: border-radius 1s ease-out;
+          // border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+          border-radius: 47% 53% 53% 47% / 47% 55% 45% 53%;
+          animation: morph 16s ease-in-out infinite both alternate;
+          position: absolute;
+          overflow: hidden;
+          z-index: 5;
+        }
+
+        .bd {
+          width: 142%;
+          height: 142%;
+          position: absolute;
+          left: -21%;
+          top: -21%;
+          background: rgb(249, 223, 229);
+          background-size: 100%;
+          background-position: center center;
+          display: flex;
+          color: #003;
+          font-size: 5vw;
+          font-weight: bold;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+          text-transform: uppercase;
+          animation: spin 24s linear infinite reverse;
+          opacity: 1;
+          z-index: 2;
+        }
+
+        &:nth-of-type(2) {
+          animation: spin 16s linear infinite reverse;
+          .shape {
+            animation: morph 10s ease-in-out infinite both alternate;
+            transform: scale(0.88);
+          }
+          .bd {
+            animation: spin 14s linear infinite reverse;
+            background-color: rgb(240, 201, 201);
+          }
+        }
+
+        @keyframes morph {
+          0% {
+            // border-radius: 40% 60% 60% 40% / 60% 30% 70% 40%;
+            border-radius: 47% 53% 53% 47% / 47% 55% 45% 53%;
+          }
+          100% {
+            // border-radius: 40% 60%;
+            border: 52% 48% 44% 56% / 53% 42% 58% 47%;
+          }
+        }
+
+        @keyframes spin {
+          to {
+            transform: rotate(1turn);
+          }
+        }
+      }
+    }
+  }
+}
+
+.card-container {
+  animation: fade-in-cart-container 2.2s $ease-out both 1s;
+  @keyframes fade-in-cart-container {
+    from {
+      transform: translateY(100px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
 }
 
 .card {
