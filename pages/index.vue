@@ -14,7 +14,7 @@
       <h2 class="sub">好きなものを好きと言うチカラ</h2>
     </div>
 
-    <section class="about-me" data-scroll data-scroll-type="slide-up">
+    <section class="about-me">
       <h1>About me</h1>
       <p>"かわいさと力強さ"の想いを形にしていくため日々修行中のデザインラーナーです。</p>
       <p>東京でWEBサイト/アプリ制作をしています。</p>
@@ -175,9 +175,19 @@ export default {
 
 // about me
 .about-me {
-  // padding: 0 6%;
   padding: 0 2em;
   font-size: 14px;
+  animation: fade-in-about-me 2.2s $ease-out both 0.5s;
+  @keyframes fade-in-about-me {
+    from {
+      transform: translateY(100px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
   @include md {
     font-size: 15px;
   }

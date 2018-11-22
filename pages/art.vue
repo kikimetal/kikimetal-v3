@@ -1,7 +1,7 @@
 <template lang="html">
   <div class="page">
 
-    <div class="heading">
+    <div class="page-heading">
       <h2 class="fuwafuwa">
         <!-- 文字列分解はどっちでもできるけど、Array.from はUnicodeサロゲートペア(絵文字など)もサポートしてるようだ -->
         <!-- 'ふわふわでもちもちな'.split('')" -->
@@ -20,7 +20,7 @@
       </h2>
     </div>
 
-    <section class="art-container">
+    <section class="card-container">
       <div
       class="card"
       v-for="(item, i) in $store.state.artItems"
@@ -71,7 +71,7 @@ export default {
 <style lang="scss" scoped>
 @import '~/assets/css/myset.scss';
 
-.heading {
+.page-heading {
   padding: 0 8% 28px;
   width: 100%;
   height: 480px;
@@ -105,9 +105,9 @@ export default {
   }
 }
 
-.art-container {
-  animation: fade-in-art-container 2.2s $ease-out both 1s;
-  @keyframes fade-in-art-container {
+.card-container {
+  animation: fade-in-card-container 2.2s $ease-out both 1s;
+  @keyframes fade-in-card-container {
     from {
       transform: translateY(100px);
       opacity: 0;
