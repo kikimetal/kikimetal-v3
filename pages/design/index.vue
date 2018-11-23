@@ -1,7 +1,7 @@
 <template lang="html">
   <div class="page">
     <div class="page-heading">
-      <!-- このページは現在制作途中です。 -->
+      このページは現在制作途中です。
       <div id="animation-container">
         <!-- cf. https://codepen.io/anon/pen/rQdzeE -->
         <div class="box">
