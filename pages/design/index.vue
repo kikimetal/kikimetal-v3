@@ -363,7 +363,7 @@ export default {
     }
   }
   .comment {
-    padding-top: 1.5em;
+    padding-top: 1.55em;
     line-height: 1.9;
     font-weight: 400;
     opacity: 0.8;
