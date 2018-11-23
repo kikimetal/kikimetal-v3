@@ -1,7 +1,7 @@
 <template lang="html">
   <div class="page">
     <div class="page-heading">
-      このページは現在制作途中です。
+      <!-- このページは現在制作途中です。 -->
       <div id="animation-container">
         <!-- cf. https://codepen.io/anon/pen/rQdzeE -->
         <div class="box">
@@ -116,6 +116,21 @@ export default {
   @include md {
     margin: 140px 0 70px;
   }
+  animation: page-in ease 3s both;
+  @keyframes page-in {
+    0% {
+      transform: scale(0.9) translateY(-20px);
+      opacity: 0;
+    }
+    25% {
+      transform: scale(0.6) translateY(50px);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1) translateY(0px);
+      opacity: 1;
+    }
+  }
 
   #animation-container {
     display: flex;
@@ -124,8 +139,8 @@ export default {
     overflow: visible;
 
     .box {
-      width: 60vmin;
-      height: 60vmin;
+      width: 86vmin;
+      height: 86vmin;
       border: 1px dashed rgba(255, 255, 255, 0.4);
       position: relative;
 
@@ -155,6 +170,17 @@ export default {
         color: $white;
         @include md {
           font-size: 1.2em;
+        }
+        animation: text-fade-in 2.2s $ease-out both 1.4s;
+        @keyframes text-fade-in {
+          from {
+            opacity: 0;
+            transform: scale(2) translateY(80px);
+          }
+          to {
+            opacity: 1;
+            transform: scale(1) translateY(0);
+          }
         }
       }
 
