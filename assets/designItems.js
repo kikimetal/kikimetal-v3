@@ -29,7 +29,7 @@ const data = [
     time: '1 weeks',
     role: ['Direction', 'Design', 'Coding', 'Deploy'],
     skill: ['Vue', 'Nuxt', 'Sass', 'Firebase'],
-    // imgLocalPath: '',
+    imgLocalPath: 'nomeru/red-02.jpg',
     linkto: 'https://autumn-kyoto.co.jp',
     comment: `
       京都で映像制作を中心にクリエイティブの価値を発信しているクリエイティブチームの株式会社Autumn様の、CI設計とコーポレートサイト制作をしました。
@@ -73,7 +73,7 @@ const data = [
     time: '4 weeks',
     role: ['UI Design', 'Coding'],
     skill: ['AdobeXD', 'Sketch', 'Vue', 'Vuetify', 'Stylus'],
-    imgLocalPath: 'nomeru/01.jpg',
+    imgLocalPath: 'nomeru/red-02.jpg',
     linkto: '/design/nomeru',
     comment: `NTTメディアサプライ株式会社様の新サービスの開発チームに参画させていただきました。
       チームで素早くプロトタイピングを行いながら機能提案をしていきました。
