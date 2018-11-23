@@ -125,7 +125,7 @@ const data = [
     subtitle: '香水ブランド ガーメント ブランドサイト',
     date: '2016.10',
     time: '2 weeks',
-    role: ['Design', 'Coding', 'Deploy'],
+    role: ['Design', 'Illustration', 'Coding', 'Deploy'],
     skill: ['HTML', 'CSS', 'jQuery'],
     imgLocalPath: 'garment-v1.jpg',
     linkto: 'https://maylily.sakura.ne.jp/kikimetal/portfolio/garment/v1/',

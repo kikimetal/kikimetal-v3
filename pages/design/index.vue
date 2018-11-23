@@ -41,7 +41,7 @@
       </div>
 
       <h1 class="title" data-scroll data-scroll-type="slide-up">
-        <a v-if="item.linkIsExternal" :href="item.linkto">
+        <a v-if="item.linkIsExternal" :href="item.linkto" target="_blank">
           <span class="main">{{ item.title || 'title...' }}</span>
         </a>
         <router-link v-else :to="item.linkto">
