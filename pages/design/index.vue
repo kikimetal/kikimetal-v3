@@ -292,7 +292,6 @@ export default {
     width: 100%;
     padding-top: 96%;
     @include box-shadow;
-    // background: ;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
