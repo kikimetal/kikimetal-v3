@@ -29,7 +29,7 @@ const data = [
     time: '1 weeks',
     role: ['Direction', 'Design', 'Coding', 'Deploy'],
     skill: ['Vue', 'Nuxt', 'Sass', 'Firebase'],
-    imgLocalPath: 'nomeru/red-02.jpg',
+    imgLocalPath: 'autumn.jpg',
     linkto: 'https://autumn-kyoto.co.jp',
     comment: `
       京都で映像制作を中心にクリエイティブの価値を発信しているクリエイティブチームの株式会社Autumn様の、CI設計とコーポレートサイト制作をしました。
@@ -44,7 +44,7 @@ const data = [
     time: '5 weeks',
     role: ['Direction', 'Design', 'Coding', 'Deploy'],
     skill: ['Vue', 'Vuex', 'Nuxt', 'Sass', 'Firebase', 'GoogleAPI', 'AdobeXD'],
-    // imgLocalPath: '',
+    imgLocalPath: 'carvancl.jpg',
     linkto: 'https://carvancl.co.jp',
     comment: `
       Webアプリケーション・Webサイトを中心に、様々なデザインアウトプットをされている株式会社CARVANCL様の、CI設計とコーポレートサイト制作をしました。
@@ -59,7 +59,7 @@ const data = [
     time: '5 weeks',
     role: ['Direction', 'Design', 'Coding', 'Deploy'],
     skill: ['Vue', 'Vuex', 'Nuxt', 'Sass', 'Firebase', 'GoogleAPI'],
-    // imgLocalPath: '',
+    imgLocalPath: 'maylily.jpg',
     linkto: 'https://maylily.co.jp',
     comment: `
       フレグランスを中心に美容品の商品開発をされている有限会社メイリリィ様のコーポレートサイトを制作しました。
@@ -73,26 +73,26 @@ const data = [
     time: '4 weeks',
     role: ['UI Design', 'Coding'],
     skill: ['AdobeXD', 'Sketch', 'Vue', 'Vuetify', 'Stylus'],
-    imgLocalPath: 'nomeru/red-02.jpg',
+    imgLocalPath: 'nomeru/01.jpg',
     linkto: '/design/nomeru',
     comment: `NTTメディアサプライ株式会社様の新サービスの開発チームに参画させていただきました。
       チームで素早くプロトタイピングを行いながら機能提案をしていきました。
       利用者にヒアリングを重ね、ユーザーに寄り添う形でサービスデザインからUIデザインまでを行いました。`,
   },
-  {
-    title: 'GARMENT Online Store',
-    subtitle: '香水ブランド ガーメント ECサイト',
-    date: '2018.03',
-    time: '1 weeks',
-    role: ['Direction', 'Design', 'Coding', 'Deploy'],
-    skill: ['HTML', 'CSS', 'EC-Cube'],
-    // imgLocalPath: '',
-    linkto: 'https://www.takeruyamashita.com/ec/html/',
-    comment: `
-      香水ブランド "GARMENT" を店舗販売のみでなく自社オンラインストアで販売したいということで、ECサイトを制作しました。
-      コストをかけずに1日でも早く公開したいという要件に沿い、短い時間で必要な機能の実装をしました。
-    `,
-  },
+  // {
+  //   title: 'GARMENT Online Store',
+  //   subtitle: '香水ブランド ガーメント ECサイト',
+  //   date: '2018.03',
+  //   time: '1 weeks',
+  //   role: ['Direction', 'Design', 'Coding', 'Deploy'],
+  //   skill: ['HTML', 'CSS', 'EC-Cube'],
+  //   imgLocalPath: 'garment-ec.jpg',
+  //   linkto: 'https://www.takeruyamashita.com/ec/html/',
+  //   comment: `
+  //     香水ブランド "GARMENT" を店舗販売のみでなく自社オンラインストアで販売したいということで、ECサイトを制作しました。
+  //     コストをかけずに1日でも早く公開したいという要件に沿い、短い時間で必要な機能の実装をしました。
+  //   `,
+  // },
   {
     title: 'GARMENT',
     subtitle: '香水ブランド ガーメント ブランドサイト',
@@ -100,7 +100,7 @@ const data = [
     time: '4 weeks',
     role: ['Direction', 'Design', 'Coding', 'Deploy'],
     skill: ['React', 'Redux', 'JavaScript ES2017', 'Babel', 'Gulp', 'SVG'],
-    // imgLocalPath: '',
+    imgLocalPath: 'garment-v2.jpg',
     linkto: 'https://www.takeruyamashita.com/garment/',
     comment: `
       ファッションと香水の関わりを再定義する香水ブランド Takeru Yamashita "GARMENT" のブランドサイトを制作しました。
@@ -114,7 +114,7 @@ const data = [
     time: '5 weeks',
     role: ['Direction', 'Design', 'Coding', 'Deploy'],
     skill: ['PHP', 'HTML', 'CSS', 'JavaScript ES2015', 'p5JS'],
-    // imgLocalPath: '',
+    imgLocalPath: 'brca.jpg',
     linkto: 'http://www.bulgarian-rose.or.jp/',
     comment: `横浜からブルガリア産のダマスクローズの価値を発信されている、一般社団法人ブルガリアンローズ文化協会様のウェブサイトを制作しました。
       p5JSを利用した花びらのアニメーションにより、薔薇の恵みが広がっていくイメージを表現しました。

@@ -40,9 +40,9 @@ export default {
         item => item.title === 'nomeru'
       )[0],
       imgs: [
-        require('~/assets/img/design/nomeru/red-02.jpg'),
-        require('~/assets/img/design/nomeru/red-02.jpg'),
-        require('~/assets/img/design/nomeru/red-02.jpg'),
+        require('~/assets/img/design/nomeru/01.jpg'),
+        require('~/assets/img/design/nomeru/02.jpg'),
+        require('~/assets/img/design/nomeru/03.jpg'),
       ],
     }
   },

@@ -28,7 +28,7 @@
       :id="item.pathname"
       >
       <div data-scroll data-scroll-type="slide-up">
-        <a v-if="item.linkIsExternal" :href="item.linkto">
+        <a v-if="item.linkIsExternal" :href="item.linkto" target="_blank">
           <div class="img" :style="{backgroundImage: `url(${item.imgsrc})`}">
             <div :class="['placeholder', {hide: item.load}]"><img src="~/assets/img/common/loader.svg" alt=""></div>
           </div>
@@ -143,6 +143,10 @@ export default {
       height: 86vmin;
       border: 1px dashed rgba(255, 255, 255, 0.4);
       position: relative;
+      @include md {
+        width: 38vmin;
+        height: 38vmin;
+      }
 
       &::before {
         content: '';
@@ -175,7 +179,7 @@ export default {
         @keyframes text-fade-in {
           from {
             opacity: 0;
-            transform: scale(2) translateY(80px);
+            transform: scale(1.6) translateY(0);
           }
           to {
             opacity: 1;
@@ -226,6 +230,8 @@ export default {
           z-index: 2;
         }
 
+        &:nth-of-type(1) {
+        }
         &:nth-of-type(2) {
           animation: spin 16s linear infinite reverse;
           .shape {
@@ -284,9 +290,9 @@ export default {
     display: block;
     position: relative;
     width: 100%;
-    padding-top: 98%;
+    padding-top: 96%;
     @include box-shadow;
-    background: pink;
+    // background: ;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -295,7 +301,7 @@ export default {
       @include touchme;
     }
     @include md {
-      padding-top: 62%;
+      padding-top: 58%;
     }
 
     .placeholder {
