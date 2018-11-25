@@ -11,17 +11,21 @@ const schema = {
 }
 
 const data = [
-  // {
-  //   title: 'Rose Darena',
-  //   subtitle: '美容ブランド ローズダレーナ リブランディング',
-  //   date: '2018.11',
-  //   time: '3 weeks',
-  //   role: ['Direction', 'Design'],
-  //   skill: ['AdobeXD', 'Photoshop', 'Illustrator'],
-  //   // imgLocalPath: '',
-  //   linkto: '/design/rosedarena',
-  //   comment: ``,
-  // },
+  {
+    title: 'Rose Darena rebranding proccess',
+    subtitle: '美容ブランド ローズダレーナ リブランディング',
+    date: '2018.11',
+    time: '2 weeks',
+    role: ['Direction', 'Design'],
+    skill: ['AdobeXD', 'Photoshop', 'Illustrator'],
+    imgLocalPath: 'rosedarena-rebranding.jpg',
+    linkto: 'https://note.mu/kikimetal/n/nbe47fe112662',
+    comment: `
+      現在、美容品ブランドの RoseDarena のリブランディングとブランドサイト、ECサイト制作を担当しています。
+      プロダクトのリデザインに伴い、メーカー様の事業戦略に沿うように、コンセプトやVIの再設計をしています。
+      現在進行形のプロジェクトですので、サイトは出来上がっていませんが、プロセスを note に記録する試みをしています。
+    `,
+  },
   {
     title: 'Autumn',
     subtitle: '株式会社Autumn コーポレートサイト',
@@ -82,20 +86,20 @@ const data = [
       利用者にヒアリングを重ね、ユーザーに寄り添う形でサービスデザインからUIデザインまでを行いました。
     `,
   },
-  // {
-  //   title: 'GARMENT Online Store',
-  //   subtitle: '香水ブランド ガーメント ECサイト',
-  //   date: '2018.03',
-  //   time: '1 weeks',
-  //   role: ['Direction', 'Design', 'Coding', 'Deploy'],
-  //   skill: ['HTML', 'CSS', 'EC-Cube'],
-  //   imgLocalPath: 'garment-ec.jpg',
-  //   linkto: 'https://www.takeruyamashita.com/ec/html/',
-  //   comment: `
-  //     香水ブランド "GARMENT" を店舗販売のみでなく自社オンラインストアで販売したいということで、ECサイトを制作しました。
-  //     コストをかけずに1日でも早く公開したいという要件に沿い、短い時間で必要な機能の実装をしました。
-  //   `,
-  // },
+  {
+    title: 'GARMENT Online Store',
+    subtitle: '香水ブランド ガーメント ECサイト',
+    date: '2018.03',
+    time: '1 weeks',
+    role: ['Direction', 'Design', 'Coding', 'Deploy'],
+    skill: ['HTML', 'CSS', 'EC-Cube'],
+    imgLocalPath: 'garment-ec.jpg',
+    linkto: 'https://www.takeruyamashita.com/ec/html/',
+    comment: `
+      香水ブランド "GARMENT" を店舗販売のみでなく自社オンラインストアで販売したいということで、ECサイトを制作しました。
+      コストをかけずに1日でも早く公開したいという要件に沿い、短い時間で必要な機能の実装をしました。
+    `,
+  },
   {
     title: 'GARMENT',
     subtitle: '香水ブランド ガーメント ブランドサイト',
