@@ -79,6 +79,10 @@ const store = () =>
             state.artItemsStatus = true
           })
       },
+
+      designItemsSortReverse(state) {
+        state.designItems = state.designItems.reverse()
+      },
     },
   })
 

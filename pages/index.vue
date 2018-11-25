@@ -168,7 +168,8 @@ export default {
 
   &.to-design {
     .box {
-      background-image: url('~assets/img/to-design.jpg');
+      // background-image: url('~assets/img/to-design.jpg');
+      background-image: url('~assets/img/design/maylily.jpg');
     }
   }
 }

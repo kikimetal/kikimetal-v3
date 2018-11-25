@@ -5,6 +5,7 @@
       <div id="animation-container">
         <!-- cf. https://codepen.io/anon/pen/rQdzeE -->
         <div class="box">
+        <!-- <div class="box" @click="$store.commit('designItemsSortReverse')"> -->
           <div class="spin-container">
             <div class="shape">
               <div class="bd"></div>
