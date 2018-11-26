@@ -48,15 +48,15 @@ br {
 //   transition: 2s transform $ease-out, 2s opacity ease;
 // }
 [data-scroll='in'][data-scroll-type='slide-up'] {
-  transition: 2s transform $ease-out, 2s opacity ease;
+  transition: 1.6s transform $ease-out, 1.6s opacity ease;
   opacity: 1;
   transform: translateY(0);
 }
 [data-scroll='out'][data-scroll-type='slide-up'] {
   opacity: 0;
-  transform: translateY(100px);
+  transform: translateY(30px);
   @include md {
-    transform: translateY(160px);
+    transform: translateY(100px);
   }
 }
 // type visibleY
