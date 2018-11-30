@@ -140,13 +140,13 @@ export default {
     overflow: visible;
 
     .box {
-      width: 86vmin;
-      height: 86vmin;
+      width: 66vmin;
+      height: 66vmin;
       border: 1px dashed rgba(255, 255, 255, 0.4);
       position: relative;
       @include md {
-        width: 38vmin;
-        height: 38vmin;
+        width: 28vmin;
+        height: 28vmin;
       }
 
       &::before {
@@ -174,7 +174,7 @@ export default {
         letter-spacing: 0.5em;
         color: $white;
         @include md {
-          font-size: 1.2em;
+          font-size: 1.1em;
         }
         animation: text-fade-in 2.2s $ease-out both 1.4s;
         @keyframes text-fade-in {
@@ -215,7 +215,7 @@ export default {
           position: absolute;
           left: -21%;
           top: -21%;
-          background: rgb(249, 223, 229);
+          background: rgb(252, 234, 238);
           background-size: 100%;
           background-position: center center;
           display: flex;
@@ -241,7 +241,7 @@ export default {
           }
           .bd {
             animation: spin 14s linear infinite reverse;
-            background-color: rgb(240, 201, 201);
+            background-color: rgb(251, 225, 225);
           }
         }
 
