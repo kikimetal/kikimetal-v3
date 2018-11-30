@@ -61,7 +61,7 @@ const store = () =>
         if (state.artItemsStatus) return
 
         const api =
-          'https://maylily.co.jp/api/getSheet.php' +
+          'https://maylily.sakura.ne.jp/api/getSheet.php' +
           '?GSSID=' +
           '1_CzKIJarThdNjjobQNLJRWmYD9edVEvuYrBrilPlV_s' +
           '&sheetName=art' +
