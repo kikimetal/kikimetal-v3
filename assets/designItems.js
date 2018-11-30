@@ -17,7 +17,7 @@ const data = [
     date: '2018.11',
     time: '2 weeks',
     role: ['Direction', 'Design'],
-    skill: ['AdobeXD', 'Photoshop', 'Illustrator'],
+    skill: ['AdobeXD', 'Photoshop', 'Illustrator', 'Writing'],
     imgLocalPath: 'rosedarena-rebranding.jpg',
     linkto: 'https://note.mu/kikimetal/n/nbe47fe112662',
     comment: `
@@ -31,7 +31,7 @@ const data = [
     subtitle: '株式会社Autumn コーポレートサイト',
     date: '2018.10',
     time: '1 weeks',
-    role: ['Direction', 'Design', 'Coding', 'Deploy'],
+    role: ['Direction', 'Design', 'Coding', 'Deploy', 'Writing'],
     skill: ['Vue', 'Nuxt', 'Sass', 'Firebase'],
     imgLocalPath: 'autumn.jpg',
     linkto: 'https://autumn-kyoto.co.jp',
@@ -46,7 +46,7 @@ const data = [
     subtitle: '株式会社カーバンクル コーポレートサイト',
     date: '2018.09',
     time: '5 weeks',
-    role: ['Direction', 'Design', 'Coding', 'Deploy'],
+    role: ['Direction', 'Design', 'Coding', 'Deploy', 'Writing'],
     skill: ['Vue', 'Vuex', 'Nuxt', 'Sass', 'Firebase', 'GoogleAPI', 'AdobeXD'],
     imgLocalPath: 'carvancl.jpg',
     linkto: 'https://carvancl.co.jp',
@@ -61,7 +61,7 @@ const data = [
     subtitle: '有限会社メイリリィ コーポレートサイト',
     date: '2018.09',
     time: '5 weeks',
-    role: ['Direction', 'Design', 'Coding', 'Deploy'],
+    role: ['Direction', 'Design', 'Coding', 'Deploy', 'Writing'],
     skill: ['Vue', 'Vuex', 'Nuxt', 'Sass', 'Firebase', 'GoogleAPI'],
     imgLocalPath: 'maylily.jpg',
     linkto: 'https://maylily.co.jp',
@@ -127,7 +127,7 @@ const data = [
     comment: `
       横浜からブルガリア産のダマスクローズの価値を発信されている、一般社団法人ブルガリアンローズ文化協会様のウェブサイトを制作しました。
       p5JSを利用した花びらのアニメーションにより、薔薇の恵みが広がっていくイメージを表現しました。
-      またブルガリアの大地の美しい表現を持ち前の美麗な写真を活かして表現できるように心掛けました。
+      また、提供された美しい写真を活かし、ブルガリアの文化や情景を表現できるよう心掛けました。
     `,
   },
   {
