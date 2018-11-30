@@ -267,10 +267,10 @@ export default {
 }
 
 .card-container {
-  animation: fade-in-cart-container 2.2s $ease-out both 1s;
+  animation: fade-in-cart-container 1.7s $ease-out both 2.1s;
   @keyframes fade-in-cart-container {
     from {
-      transform: translateY(100px);
+      transform: translateY(50px);
       opacity: 0;
     }
     to {
