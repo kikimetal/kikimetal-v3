@@ -16,8 +16,8 @@ const data = [
     subtitle: '美容ブランド ローズダレーナ リブランディング',
     date: '2018.11',
     time: '2 weeks',
-    role: ['Direction', 'Design'],
-    skill: ['AdobeXD', 'Photoshop', 'Illustrator', 'Writing'],
+    role: ['Direction', 'Design', 'Writing'],
+    skill: ['AdobeXD', 'Photoshop', 'Illustrator'],
     imgLocalPath: 'rosedarena-rebranding.jpg',
     linkto: 'https://note.mu/kikimetal/n/nbe47fe112662',
     comment: `
