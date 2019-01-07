@@ -37,6 +37,8 @@ module.exports = {
       { property: 'og:type', content: 'website' },
       { property: 'og:image', content: 'https://kikimetal.com/og-image.jpg' },
       { name: 'twitter:card', content: 'summary_large_image' },
+      // pinterest domain Authentication
+      { name: 'p:domain_verify', content: '65365ebbd1a39ee7477144c933d52a54' },
     ],
     link: [
       { rel: 'icon', type: 'image/vnd.microsoft.icon', href: '/favicon.ico' },
